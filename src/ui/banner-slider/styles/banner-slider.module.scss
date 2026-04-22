@@ -2,22 +2,8 @@
   --swiper-button-width: 3.5rem;
   --swiper-button-gap: 1.5rem;
   --swiper-button-position: calc(
-    var(--swiper-button-width) / 2 + var(--swiper-button-gap)
+    var(--wrapper-width) / 2 + var(--swiper-button-width) + var(--swiper-button-gap)
   );
-
-  height: 18rem;
-
-  @screen sm {
-    height: 24rem;
-  }
-
-  @screen md {
-    height: 32rem;
-  }
-
-  @screen lg {
-    height: 44rem;
-  }
 }
 
 .next {
@@ -26,4 +12,10 @@
 
 .prev {
   transform: translateX(calc(var(--swiper-button-position) * -1));
+}
+
+@screen lg {
+  .main {
+    height: 44rem;
+  }
 }

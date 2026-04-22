@@ -23,13 +23,13 @@ export function BannerSliderItem({ item }: Props) {
   };
 
   return (
-    <div className="w-full overflow-hidden mt-16" onClick={handleOnClick}>
+    <div className="max-w-wrapper w-full rounded-2xl overflow-hidden mt-16" onClick={handleOnClick}>
       <Image
         src={image}
         alt={alt}
         className="h-full w-full object-cover relative pointer-events-none"
-        width="1920"
-        height="700"
+        width="1200"
+        height="470"
       />
     </div>
   );

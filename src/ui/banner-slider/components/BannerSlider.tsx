@@ -22,7 +22,7 @@ export function BannerSlider() {
         return (
           <SwiperSlide
             key={slide.alt}
-            className="w-full flex items-center justify-center"
+            className="w-full flex items-center justify-center px-2 md:px-4 xl:px-0"
           >
             <BannerSliderItem item={slide} />
           </SwiperSlide>
