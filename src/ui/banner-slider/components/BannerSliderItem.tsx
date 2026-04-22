@@ -23,13 +23,18 @@ export function BannerSliderItem({ item }: Props) {
   };
 
   return (
-    <div className="w-full overflow-hidden mt-16" onClick={handleOnClick}>
+    <div
+      className="w-full h-full overflow-hidden"
+      style={{ cursor: link ? 'pointer' : 'default' }}
+      onClick={handleOnClick}
+    >
       <Image
         src={image}
         alt={alt}
-        className="h-full w-full object-cover relative pointer-events-none"
-        width="1920"
-        height="700"
+        className="w-full h-full object-cover pointer-events-none"
+        fill
+        priority
+        sizes="100vw"
       />
     </div>
   );

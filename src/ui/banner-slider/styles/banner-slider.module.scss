@@ -5,19 +5,7 @@
     var(--swiper-button-width) / 2 + var(--swiper-button-gap)
   );
 
-  height: 18rem;
-
-  @screen sm {
-    height: 24rem;
-  }
-
-  @screen md {
-    height: 32rem;
-  }
-
-  @screen lg {
-    height: 44rem;
-  }
+  height: 100vh;
 }
 
 .next {
@@ -26,4 +14,27 @@
 
 .prev {
   transform: translateX(calc(var(--swiper-button-position) * -1));
+}
+
+.scrollIndicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  animation: bounce 2s infinite;
+  cursor: pointer;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(8px); }
 }

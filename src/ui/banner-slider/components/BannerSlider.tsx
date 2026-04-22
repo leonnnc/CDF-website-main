@@ -5,29 +5,33 @@ import { SwiperSlide } from '@ui/swiper/components/SwiperSlide';
 import clsx from 'clsx';
 
 import { BannerSliderItem } from './BannerSliderItem';
+import { ScrollIndicator } from './ScrollIndicator';
 
 export function BannerSlider() {
   return (
-    <Swiper
-      className={clsx(BannerSliderStyles.main)}
-      arrowLeftClass={clsx(BannerSliderStyles.prev, 'hidden md:flex')}
-      arrowRightClass={clsx(BannerSliderStyles.next, 'hidden md:flex')}
-      paginationClass="xl:hidden"
-      loop
-      arrow
-      autoplay
-      pagination
-    >
-      {BANNER_SLIDES.map((slide) => {
-        return (
-          <SwiperSlide
-            key={slide.alt}
-            className="w-full flex items-center justify-center"
-          >
-            <BannerSliderItem item={slide} />
-          </SwiperSlide>
-        );
-      })}
-    </Swiper>
+    <div className="relative">
+      <Swiper
+        className={clsx(BannerSliderStyles.main)}
+        arrowLeftClass={clsx(BannerSliderStyles.prev, 'hidden md:flex')}
+        arrowRightClass={clsx(BannerSliderStyles.next, 'hidden md:flex')}
+        paginationClass="xl:hidden"
+        loop
+        arrow
+        autoplay
+        pagination
+      >
+        {BANNER_SLIDES.map((slide) => {
+          return (
+            <SwiperSlide
+              key={slide.alt}
+              className="relative w-full h-full"
+            >
+              <BannerSliderItem item={slide} />
+            </SwiperSlide>
+          );
+        })}
+      </Swiper>
+      <ScrollIndicator />
+    </div>
   );
 }
