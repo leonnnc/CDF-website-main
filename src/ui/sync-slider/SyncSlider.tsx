@@ -28,10 +28,14 @@ export function SyncSlider({ items, className, thumbnailOptions, panelOptions }:
         type: 'index',
         synchronizedFlickingOptions: [
           {
+            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            // @ts-ignore - Type mismatch between @egjs/flicking versions
             flicking: slider.current,
             isSlidable: true,
           },
           {
+            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            // @ts-ignore - Type mismatch between @egjs/flicking versions
             flicking: preview.current,
             isClickable: true,
             activeClass: '!opacity-100',
