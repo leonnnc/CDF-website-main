@@ -37,14 +37,20 @@ function SwiperAdapter(
   const pluginSetup = plugins ? plugins : [];
 
   if (autoplay) {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore - Type mismatch between @egjs/flicking versions in plugins and react-flicking
     pluginSetup.push(swiperAutoplay());
   }
 
   if (arrow) {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore - Type mismatch between @egjs/flicking versions in plugins and react-flicking
     pluginSetup.push(swiperArrow());
   }
 
   if (pagination) {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore - Type mismatch between @egjs/flicking versions in plugins and react-flicking
     pluginSetup.push(swiperPagination());
   }
 
