@@ -1,0 +1,60 @@
+.main {
+  --shape-animation: 5s ease-in-out infinite;
+}
+
+.ball {
+  animation: float-ball var(--shape-animation);
+  animation-delay: -1.5s;
+
+  svg {
+    transform: rotate(20deg);
+  }
+}
+
+.cubes {
+  animation: float-cubes var(--shape-animation);
+}
+
+@keyframes float-cubes {
+  0% {
+    transform: translate(33%);
+  }
+  50% {
+    transform: translate(33%, -1rem);
+  }
+  100% {
+    transform: translate(33%);
+  }
+}
+
+@keyframes float-ball {
+  0% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, -1rem);
+  }
+  100% {
+    transform: translate(-50%, 0);
+  }
+}
+
+@screen md {
+  .ball {
+    top: 15%;
+
+    svg {
+      height: 15.25rem;
+      width: 15.25rem;
+    }
+  }
+
+  .cubes {
+    bottom: 15%;
+
+    svg {
+      height: 16rem;
+      width: 16rem;
+    }
+  }
+}

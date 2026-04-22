@@ -1,0 +1,26 @@
+.main {
+  --bg-size: cover;
+  --bg-position: center center;
+
+  background: linear-gradient(
+      0deg,
+      rgb(11, 16, 34) 0%,
+      rgba(11, 16, 34, 0.8) 50%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    var(--panel-background);
+  background-size: var(--bg-size);
+  background-position: var(--bg-position);
+}
+
+.content {
+  max-width: 46rem;
+}
+
+:global(.dark) {
+  .main {
+    background: linear-gradient(to bottom, rgb(0 0 0 / 0.2), rgb(0 0 0)), var(--panel-background);
+    background-size: var(--bg-size);
+    background-position: var(--bg-position);
+  }
+}

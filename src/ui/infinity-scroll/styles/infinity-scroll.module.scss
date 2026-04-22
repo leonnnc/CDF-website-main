@@ -1,0 +1,24 @@
+.main {
+  @apply flex overflow-hidden;
+
+  .scroller {
+    @apply flex;
+
+    display: flex;
+    gap: var(--gap);
+    animation: scrollX var(--time) linear infinite;
+
+    &:has(> *:hover) {
+      animation-play-state: paused;
+    }
+  }
+}
+
+@keyframes scrollX {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-50% - var(--gap) / 2));
+  }
+}

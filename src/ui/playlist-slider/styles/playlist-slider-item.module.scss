@@ -1,0 +1,19 @@
+.main {
+  background-image: linear-gradient(
+      rgb(13, 20, 38, 0) 0%,
+      rgb(13, 20, 38, 0.42) 40%,
+      rgb(13, 20, 38, 1) 100%
+    ),
+    var(--background-image);
+}
+
+:global(.dark) {
+  .main {
+    background-image: linear-gradient(
+        rgb(0, 0, 0, 0) 0%,
+        rgb(0, 0, 0, 0.5) 40%,
+        rgb(0, 0, 0, 1) 100%
+      ),
+      var(--background-image);
+  }
+}

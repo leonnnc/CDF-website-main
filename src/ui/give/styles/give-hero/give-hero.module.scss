@@ -1,0 +1,109 @@
+.main {
+  --shape-animation: 3s ease-in-out infinite;
+}
+
+.content {
+  max-width: 44rem;
+}
+
+.description {
+  animation-delay: 0.5s;
+}
+
+.button {
+  animation-delay: 0.8s;
+}
+
+.ball {
+  animation: float-ball var(--shape-animation);
+  animation-delay: -0.5s;
+
+  svg {
+    animation-delay: 0.5s;
+  }
+}
+
+.circle {
+  animation: float-circle var(--shape-animation);
+
+  div {
+    animation-delay: 1s;
+  }
+}
+
+.cubes {
+  animation: float-cubes var(--shape-animation);
+  animation-delay: -1s;
+
+  svg {
+    animation-delay: 0.75s;
+  }
+}
+
+@keyframes float-cubes {
+  0% {
+    transform: translate(33%);
+  }
+  50% {
+    transform: translate(33%, -1rem);
+  }
+  100% {
+    transform: translate(33%);
+  }
+}
+
+@keyframes float-ball {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-1rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes float-circle {
+  0% {
+    transform: translate(-33%);
+  }
+  50% {
+    transform: translate(-33%, -1rem);
+  }
+  100% {
+    transform: translate(-33%);
+  }
+}
+
+@screen md {
+  .main {
+    padding-top: 14rem;
+  }
+
+  .ball {
+    svg {
+      height: 7.5rem;
+      width: 7.5rem;
+    }
+  }
+
+  .cubes {
+    svg {
+      height: 7.25rem;
+      width: 7.25rem;
+    }
+  }
+
+  @keyframes float-ball {
+    0% {
+      transform: translate(-100%);
+    }
+    50% {
+      transform: translate(-100%, -1rem);
+    }
+    100% {
+      transform: translate(-100%);
+    }
+  }
+}

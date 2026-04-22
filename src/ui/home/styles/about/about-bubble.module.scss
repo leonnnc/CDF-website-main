@@ -1,0 +1,52 @@
+.main {
+  height: 16rem;
+  width: 24.5rem;
+  background: conic-gradient(
+    from 170deg at 60% 60%,
+    rgb(249 250 251) 10%,
+    rgb(229 41 150) 34%,
+    rgb(96 126 199) 45%,
+    rgba(96 126 199 / 0.5) 81%,
+    rgb(249 250 251) 100%
+  );
+  filter: blur(8rem);
+  transform: rotate(65deg);
+
+  @screen lg {
+    height: 40rem;
+    width: 37rem;
+    transform: rotate(50deg);
+    background: conic-gradient(
+      from 125deg at 50% 50%,
+      rgb(249 250 251) 0%,
+      rgb(229 41 150) 50%,
+      rgb(96 126 199) 60%,
+      rgb(96 126 199 / 0.5) 75%,
+      rgb(249 250 251) 100%
+    );
+  }
+}
+
+:global(.dark) {
+  .main {
+    background: conic-gradient(
+      from 170deg at 60% 60%,
+      rgb(8 12 23) 10%,
+      rgb(137 32 102) 34%,
+      rgb(40 61 115) 45%,
+      rgba(24 36 68/ 0.5) 81%,
+      rgb(8 12 23) 100%
+    );
+
+    @screen lg {
+      background: conic-gradient(
+        from 125deg at 50% 50%,
+        rgb(8 12 23) 0%,
+        rgb(137 32 102) 50%,
+        rgb(40 61 115) 60%,
+        rgb(24 36 68 / 0.5) 75%,
+        rgb(8 12 23) 100%
+      );
+    }
+  }
+}

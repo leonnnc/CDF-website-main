@@ -1,0 +1,26 @@
+.main {
+  height: 54rem;
+  width: 109rem;
+  background-image: conic-gradient(
+    from 19deg at 56% 36%,
+    #f9fafb 6%,
+    rgb(96, 126, 199, 0.5) 33%,
+    #f9fafb 61%,
+    #e52996 88%,
+    #f9fafb 99%
+  );
+  filter: blur(12rem);
+}
+
+:global(.dark) {
+  .main {
+    background-image: conic-gradient(
+      from 19deg at 56% 36%,
+      #0a0c10 6%,
+      #283d73 33%,
+      #010202 61%,
+      #892066 88%,
+      #0a0c10 99%
+    );
+  }
+}

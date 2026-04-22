@@ -1,0 +1,57 @@
+.card {
+  &::before {
+    @apply absolute h-16 w-16 scale-0 transition-transform duration-700;
+    content: '';
+  }
+
+  &:nth-of-type(1) {
+    transform: translateY(-4rem);
+
+    &::before {
+      @apply right-1/4;
+      transition-delay: 0.6s;
+      background: #6366f1;
+    }
+  }
+  &:nth-of-type(2) {
+    transform: translateX(4rem);
+    transition-delay: 0.3s;
+
+    &::before {
+      @apply left-0 bottom-1/4;
+      transition-delay: 0.8s;
+      background: #f8b84e;
+    }
+  }
+  &:nth-of-type(3) {
+    transform: translateX(-4rem);
+    transition-delay: 0.6s;
+
+    &::before {
+      @apply left-0 top-0;
+      transition-delay: 1s;
+      background: #f97316;
+    }
+  }
+  &:nth-of-type(4) {
+    transform: translateY(4rem);
+    transition-delay: 0.9s;
+
+    &::before {
+      @apply right-1/4 bottom-0;
+      transition-delay: 1.2s;
+      background: #4ade80;
+    }
+  }
+}
+
+.cardsContainer {
+  .card {
+    opacity: 1;
+    transform: translate(0, 0);
+
+    &::before {
+      @apply scale-100;
+    }
+  }
+}

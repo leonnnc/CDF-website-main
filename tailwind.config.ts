@@ -1,0 +1,101 @@
+import type { Config } from 'tailwindcss';
+import tailwindcssAnimate from 'tailwindcss-animate';
+
+export default {
+  content: [
+    './src/shared/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/modules/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/ui/**/*.{js,ts,jsx,tsx,mdx}',
+  ],
+  theme: {
+    fontFamily: {
+      sans: ['var(--font-poppins)'],
+      montserrant: ['var(--font-montserrant)'],
+    },
+    colors: {
+      white: '#ffffff',
+      transparent: 'transparent',
+      none: 'none',
+      neutral: {
+        '100': '#F9FAFB',
+        '200': '#F4F5F6',
+        '300': '#C0C8CE',
+        '400': '#9BA6B1',
+        '500': '#7E8D9B',
+        '600': '#596C7D',
+        '700': '#404E5B',
+        '800': '#28323B',
+        '900': '#13191E',
+      },
+      primary: {
+        '100': '#CAD4EC',
+        '200': '#95A9DA',
+        '300': '#607EC7',
+        '400': '#3A59A6',
+        '500': '#283D73',
+        '600': '#20305B',
+        '700': '#182444',
+        '800': '#10182D',
+        '900': '#080C17',
+      },
+      green: {
+        '100': '#E7F0F0',
+        '200': '#CFE2E2',
+        '300': '#B6D3D3',
+        '400': '#9EC4C5',
+        '500': '#86B6B7',
+        '600': '#5F9D9E',
+        '700': '#477677',
+        '800': '#2F4F4F',
+        '900': '#182728',
+      },
+      yellow: {
+        '100': '#F9EFCD',
+        '200': '#F4DF9C',
+        '300': '#EED06A',
+        '400': '#E9C039',
+        '500': '#D2A517',
+        '600': '#A98613',
+        '700': '#7F640E',
+        '800': '#544309',
+        '900': '#2A2105',
+      },
+      red: {
+        '100': '#F0D9DC',
+        '200': '#E2B2B9',
+        '300': '#D38C96',
+        '400': '#C56574',
+        '500': '#AF4353',
+        '600': '#8E3643',
+        '700': '#6A2832',
+        '800': '#471B22',
+        '900': '#230D11',
+      },
+    },
+    fontSize: {
+      h1: ['3.5rem', '1.4'],
+      h2: ['2.5rem', '1.4'],
+      h3: ['2rem', '1.4'],
+      h4: ['1.5rem', '1.4'],
+      bigger: ['1.125rem', '1.2'],
+      normal: ['1rem', '1.8'],
+      small: ['0.875rem', '1.8'],
+      smaller: ['0.75rem', '1.8'],
+      tiny: ['0.625rem', '1.8'],
+    },
+    extend: {
+      zIndex: {
+        '1': '1',
+      },
+      spacing: {
+        wrapper: '75rem',
+      },
+      aspectRatio: {
+        picture: '3 / 4',
+      },
+    },
+  },
+  darkMode: ['class'],
+  plugins: [tailwindcssAnimate],
+} satisfies Config;

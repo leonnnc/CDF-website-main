@@ -1,0 +1,41 @@
+.main {
+  grid-template-areas:
+    'about'
+    'contact'
+    'social'
+    'brand';
+}
+
+.about {
+  grid-area: about;
+}
+
+.contact {
+  grid-area: contact;
+}
+
+.social {
+  grid-area: social;
+}
+
+.brand {
+  grid-area: brand;
+}
+
+@screen md {
+  .main {
+    grid-template-areas:
+      'about about contact contact contact'
+      'about about social social social'
+      'brand brand brand brand brand';
+  }
+}
+
+@screen lg {
+  .main {
+    grid-template-areas:
+      'about about about about contact contact contact contact contact social social'
+      'about about about about contact contact contact contact contact social social'
+      'about about about about brand brand brand brand brand social social';
+  }
+}

@@ -1,0 +1,39 @@
+:root {
+  --wrapper-width: 75rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  &::-webkit-scrollbar {
+    border-radius: 0.5rem;
+    height: 0.625rem;
+    width: 0.625rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 0.5rem;
+    background: #95a9da;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 0.5rem;
+    background: #f9fafb;
+  }
+}
+
+.dark {
+  body {
+    &::-webkit-scrollbar-thumb {
+      border-radius: 0.5rem;
+      background: #20305b;
+    }
+
+    &::-webkit-scrollbar-track {
+      border-radius: 0.5rem;
+      background: #080c17;
+    }
+  }
+}

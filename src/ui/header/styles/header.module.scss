@@ -1,0 +1,22 @@
+.main {
+  @apply border border-neutral-300/50;
+
+  backdrop-filter: blur(2.5rem);
+  background: rgba(225, 225, 225, 0.3);
+}
+
+:global(.dark) {
+  .main {
+    @apply border-neutral-300/15;
+
+    background: rgb(32 48 91 / 0.15);
+  }
+}
+
+@screen lg {
+  :global(.dark) {
+    .main {
+      background: rgb(32 48 91 / 0.6);
+    }
+  }
+}

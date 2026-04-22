@@ -1,0 +1,34 @@
+.main {
+  &::before,
+  &::after {
+    @apply absolute h-24 w-24 rounded-full opacity-50;
+    content: '';
+  }
+
+  &.decorationYellow {
+    &:before {
+      @apply -top-0 -right-0 translate-x-1/4 -translate-y-1/4;
+      background: #f8b84e;
+    }
+  }
+
+  &.decorationGreen {
+    &:before {
+      @apply bottom-0 left-0 -translate-x-1/4 translate-y-2/3;
+      background: #4ade80;
+    }
+  }
+
+  &.decorationDouble {
+    &:before {
+      @apply bottom-0 left-0 -translate-x-1/4 translate-y-1/4;
+      background: #f97316;
+    }
+
+    &:after {
+      @apply -top-0 -right-0 translate-x-1/4 -translate-y-1/4;
+      background: #6366f1;
+      z-index: -1;
+    }
+  }
+}

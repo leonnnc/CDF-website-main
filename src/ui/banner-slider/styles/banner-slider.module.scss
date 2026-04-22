@@ -1,0 +1,21 @@
+.main {
+  --swiper-button-width: 3.5rem;
+  --swiper-button-gap: 1.5rem;
+  --swiper-button-position: calc(
+    var(--wrapper-width) / 2 + var(--swiper-button-width) + var(--swiper-button-gap)
+  );
+}
+
+.next {
+  transform: translateX(var(--swiper-button-position));
+}
+
+.prev {
+  transform: translateX(calc(var(--swiper-button-position) * -1));
+}
+
+@screen lg {
+  .main {
+    height: 44rem;
+  }
+}
